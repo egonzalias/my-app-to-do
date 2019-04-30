@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_profile">PROFILE</string>
+    <string name="tvFirstName">First Name</string>
+    <string name="lblLastName">Last Name</string>
+    <string name="lbl_btn_search">Search</string>
+</resources>
