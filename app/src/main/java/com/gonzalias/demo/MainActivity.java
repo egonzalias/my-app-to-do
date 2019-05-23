@@ -1,4 +1,4 @@
-package com.gozalias.demo;
+package com.gonzalias.demo;
 
 import android.os.Bundle;
 
@@ -8,8 +8,8 @@ import com.google.android.material.snackbar.Snackbar;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
-import com.gozalias.demo.user.UserFragment;
-import com.gozalias.demo.util.ActivityUtils;
+import com.gonzalias.demo.user.UserFragment;
+import com.gonzalias.demo.util.ActivityUtils;
 
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;

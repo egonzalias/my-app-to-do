@@ -1,4 +1,4 @@
-package com.gozalias.demo.repository.extern;
+package com.gonzalias.demo.repository.extern;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

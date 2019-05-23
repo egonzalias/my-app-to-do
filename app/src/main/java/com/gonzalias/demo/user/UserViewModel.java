@@ -1,10 +1,15 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
 
-import com.gozalias.demo.dagger.DaggerGeneralComponent;
+
+
+import android.view.View;
+
+import com.gonzalias.demo.dagger.DaggerGeneralComponent;
 
 import javax.inject.Inject;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -20,7 +25,7 @@ public class UserViewModel extends ViewModel {
         DaggerGeneralComponent.builder().build().inject(this);
     }
 
-    public void init(String userId) {
+    public void getUser(@NonNull final View v) {
 
         if (this.user != null) {
             // ViewModel is created on a per-Fragment basis, so the userId
@@ -30,7 +35,11 @@ public class UserViewModel extends ViewModel {
         user = userRepo.getUser(userId);
     }
 
-    public LiveData<UserResponse> getUser() {
-        return this.user;
+    public void clicktest(){
+        System.out.println("XXXX:");
     }
+
+    /*public LiveData<UserResponse> getUser() {
+        return this.user;
+    }*/
 }

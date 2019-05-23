@@ -1,6 +1,6 @@
-package com.gozalias.demo.repository.extern;
+package com.gonzalias.demo.repository.extern;
 
-import com.gozalias.demo.user.UserResponse;
+import com.gonzalias.demo.user.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

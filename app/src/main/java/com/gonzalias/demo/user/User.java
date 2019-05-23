@@ -1,11 +1,13 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class User {
+public class User extends BaseObservable {
 
     @PrimaryKey
     private int id;
@@ -18,6 +20,7 @@ public class User {
     @ColumnInfo(name = "country")
     private String country;
 
+    @Bindable
     public int getId() {
         return id;
     }
@@ -26,6 +29,7 @@ public class User {
         this.id = id;
     }
 
+    @Bindable
     public String getName() {
         return name;
     }
@@ -34,6 +38,7 @@ public class User {
         this.name = name;
     }
 
+    @Bindable
     public String getLastName() {
         return lastName;
     }
@@ -42,6 +47,7 @@ public class User {
         this.lastName = lastName;
     }
 
+    @Bindable
     public String getAge() {
         return age;
     }
@@ -50,6 +56,7 @@ public class User {
         this.age = age;
     }
 
+    @Bindable
     public String getCountry() {
         return country;
     }

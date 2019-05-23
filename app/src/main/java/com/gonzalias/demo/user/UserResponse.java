@@ -1,4 +1,4 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
 import com.google.gson.annotations.SerializedName;
 

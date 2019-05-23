@@ -1,9 +1,10 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -11,9 +12,11 @@ import androidx.lifecycle.ViewModelProviders;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-import com.gozalias.demo.R;
+import com.gonzalias.demo.R;
+import com.gonzalias.demo.databinding.FragmentUserBinding;
 
 
 /**
@@ -25,6 +28,7 @@ public class UserFragment extends Fragment {
     private TextView tvFirstName;
     private TextView tvLastName;
     private TextView tvID;
+    private Button btnSearch;
 
     public UserFragment() {
         // Required empty public constructor
@@ -39,7 +43,6 @@ public class UserFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         viewModel = ViewModelProviders.of(this).get(UserViewModel.class);
-        viewModel.init("2");
 
         final Observer<UserResponse> nameObserver = new Observer<UserResponse>() {
             @Override
@@ -49,8 +52,11 @@ public class UserFragment extends Fragment {
                 tvID.setText(userResponse.data.id);
             }
         };
-        viewModel.getUser().observe(this, nameObserver);
-        //tvName.setText("xxxx");
+        //viewModel.getUser().observe(this, nameObserver);
+
+
+        FragmentUserBinding binding = FragmentUserBinding.inflate(getLayoutInflater());
+        binding.setViewModel(viewModel);
     }
 
     @Override
@@ -62,6 +68,7 @@ public class UserFragment extends Fragment {
         tvFirstName = view.findViewById(R.id.tvFirstName);
         tvLastName = view.findViewById(R.id.tvLastName);
         tvID = view.findViewById(R.id.tvID);
+        btnSearch = view.findViewById(R.id.btnSearch);
 
         return view;
     }

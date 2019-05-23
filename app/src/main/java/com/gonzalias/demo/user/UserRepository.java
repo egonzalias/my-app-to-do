@@ -1,7 +1,7 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
-import com.gozalias.demo.repository.extern.WebClient;
-import com.gozalias.demo.repository.extern.WebService;
+import com.gonzalias.demo.repository.extern.WebClient;
+import com.gonzalias.demo.repository.extern.WebService;
 
 import javax.inject.Inject;
 

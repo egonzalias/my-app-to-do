@@ -1,7 +1,7 @@
-package com.gozalias.demo.dagger;
+package com.gonzalias.demo.dagger;
 
-import com.gozalias.demo.user.UserRepository;
-import com.gozalias.demo.user.UserViewModel;
+import com.gonzalias.demo.user.UserRepository;
+import com.gonzalias.demo.user.UserViewModel;
 
 
 import dagger.Component;

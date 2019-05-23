@@ -1,4 +1,4 @@
-package com.gozalias.demo.user;
+package com.gonzalias.demo.user;
 
 import java.util.List;
 

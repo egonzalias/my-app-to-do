@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.gozalias.demo.util;
+package com.gonzalias.demo.util;
 
 import android.annotation.SuppressLint;
 

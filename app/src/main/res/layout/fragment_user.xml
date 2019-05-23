@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <data>
+        <variable name="user" type="com.gonzalias.demo.user.User"/>
+        <variable name="viewModel" type="com.gonzalias.demo.user.UserViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,7 +19,7 @@
             android:text="@string/lbl_btn_search"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvID" />
+            app:layout_constraintTop_toBottomOf="@+id/tvID"/>
 
         <TextView
             android:id="@+id/tvFirstName"
@@ -28,39 +28,21 @@
             android:layout_marginTop="63dp"
             android:layout_marginEnd="107dp"
             android:layout_marginRight="107dp"
-            android:text="TextView"
+            android:text="@{user.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivPhoto" />
-
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:barrierDirection="left"
-            tools:layout_editor_absoluteX="411dp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="104dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp"
+            android:text="@string/lbl_title_profile"
             android:textSize="18sp"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="@+id/ivPhoto"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/lbl_title_profile" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView4"
@@ -79,11 +61,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="39dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:srcCompat="@tools:sample/avatars[10]" />
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView6"
@@ -102,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="TextView"
+            android:text="@{user.lastName}"
             app:layout_constraintStart_toStartOf="@+id/tvFirstName"
             app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
 
@@ -121,9 +104,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="TextView"
+            android:text="@{user.id}"
             app:layout_constraintStart_toStartOf="@+id/tvLastName"
             app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+</layout>
